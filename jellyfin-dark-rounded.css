@@ -4,7 +4,7 @@
  * Couleurs : Noir et nuances de gris
  */
 
-/* Variables CSS pour le thème */
+/* Variables CSS pour le thème - VERSION SUPER ARRONDI */
 :root {
   --primary-color: #1a1a1a;
   --secondary-color: #2d2d2d;
@@ -13,11 +13,12 @@
   --hover-color: #5a5a5a;
   --text-primary: #ffffff;
   --text-secondary: #b0b0b0;
-  --border-radius: 12px;
-  --border-radius-small: 8px;
-  --border-radius-large: 16px;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  --transition: all 0.3s ease;
+  --border-radius: 20px;
+  --border-radius-small: 15px;
+  --border-radius-large: 25px;
+  --border-radius-extra-large: 35px;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Corps principal */
@@ -51,42 +52,48 @@ body {
   border-radius: var(--border-radius-small) !important;
 }
 
-/* Cartes et éléments de contenu */
+/* Cartes et éléments de contenu - Super arrondis */
 .card {
-  border-radius: var(--border-radius) !important;
+  border-radius: var(--border-radius-large) !important;
   background: var(--secondary-color) !important;
   box-shadow: var(--shadow) !important;
   transition: var(--transition) !important;
   overflow: hidden !important;
+  transform: scale(1) !important;
 }
 
 .card:hover {
-  transform: translateY(-4px) !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+  transform: translateY(-6px) scale(1.02) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5) !important;
 }
 
 .cardImage {
-  border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+  border-radius: var(--border-radius-large) var(--border-radius-large) 0 0 !important;
+  transition: var(--transition) !important;
 }
 
 .cardBox {
-  border-radius: var(--border-radius) !important;
+  border-radius: var(--border-radius-large) !important;
   background-color: var(--secondary-color) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
-/* Boutons */
+/* Boutons - Super arrondis */
 .btn {
-  border-radius: var(--border-radius-small) !important;
+  border-radius: var(--border-radius-large) !important;
   background-color: var(--tertiary-color) !important;
   color: var(--text-primary) !important;
   border: none !important;
   transition: var(--transition) !important;
-  padding: 8px 16px !important;
+  padding: 12px 24px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.5px !important;
 }
 
 .btn:hover {
   background-color: var(--hover-color) !important;
-  transform: scale(1.05) !important;
+  transform: scale(1.05) translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
 }
 
 .btn-submit {
@@ -130,13 +137,14 @@ body {
   border-radius: var(--border-radius-small) !important;
 }
 
-/* Barre de recherche */
+/* Barre de recherche - Super arrondie */
 .searchInput {
   background-color: var(--tertiary-color) !important;
   color: var(--text-primary) !important;
-  border-radius: var(--border-radius-large) !important;
-  border: 1px solid var(--accent-color) !important;
-  padding: 12px 20px !important;
+  border-radius: var(--border-radius-extra-large) !important;
+  border: 2px solid var(--accent-color) !important;
+  padding: 15px 25px !important;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3) !important;
 }
 
 .searchInput:focus {
@@ -144,18 +152,21 @@ body {
   box-shadow: 0 0 0 3px rgba(90, 90, 90, 0.3) !important;
 }
 
-/* Dialogues et modales */
+/* Dialogues et modales - Super arrondis */
 .dialog {
-  border-radius: var(--border-radius-large) !important;
+  border-radius: var(--border-radius-extra-large) !important;
   background-color: var(--secondary-color) !important;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6) !important;
+  overflow: hidden !important;
 }
 
 .dialog-title {
   color: var(--text-primary) !important;
   background-color: var(--tertiary-color) !important;
-  border-radius: var(--border-radius-large) var(--border-radius-large) 0 0 !important;
-  padding: 16px !important;
+  border-radius: var(--border-radius-extra-large) var(--border-radius-extra-large) 0 0 !important;
+  padding: 20px !important;
+  font-size: 1.2em !important;
+  font-weight: 600 !important;
 }
 
 /* Barre de progression */
@@ -198,23 +209,25 @@ body {
   background-color: transparent !important;
 }
 
-/* Page de détails des médias */
+/* Page de détails des médias - Super arrondie */
 .detailPageWrapperContainer {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
 }
 
 .detailPagePrimaryContainer {
   background-color: rgba(45, 45, 45, 0.9) !important;
-  border-radius: var(--border-radius-large) !important;
-  padding: 24px !important;
-  margin: 16px !important;
-  backdrop-filter: blur(10px) !important;
+  border-radius: var(--border-radius-extra-large) !important;
+  padding: 30px !important;
+  margin: 20px !important;
+  backdrop-filter: blur(15px) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5) !important;
 }
 
-/* Lecteur vidéo */
+/* Lecteur vidéo - Super arrondi */
 .videoPlayer {
-  border-radius: var(--border-radius-large) !important;
+  border-radius: var(--border-radius-extra-large) !important;
   overflow: hidden !important;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.7) !important;
 }
 
 /* Menu contextuel */
