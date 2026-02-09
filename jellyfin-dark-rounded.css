@@ -1,0 +1,298 @@
+/*
+ * Jellyfin Dark Rounded Theme
+ * Theme sombre avec bords arrondis pour Jellyfin
+ * Couleurs : Noir et nuances de gris
+ */
+
+/* Variables CSS pour le thème */
+:root {
+  --primary-color: #1a1a1a;
+  --secondary-color: #2d2d2d;
+  --tertiary-color: #3a3a3a;
+  --accent-color: #4a4a4a;
+  --hover-color: #5a5a5a;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --border-radius: 12px;
+  --border-radius-small: 8px;
+  --border-radius-large: 16px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --transition: all 0.3s ease;
+}
+
+/* Corps principal */
+body {
+  background-color: var(--primary-color) !important;
+  color: var(--text-primary) !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* En-tête */
+.skinHeader {
+  background: var(--secondary-color) !important;
+  border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+/* Navigation */
+.navMenuOption {
+  border-radius: var(--border-radius-small) !important;
+  margin: 4px 8px !important;
+  transition: var(--transition) !important;
+}
+
+.navMenuOption:hover {
+  background-color: var(--tertiary-color) !important;
+  transform: translateX(4px) !important;
+}
+
+.navMenuOption-selected {
+  background-color: var(--accent-color) !important;
+  border-radius: var(--border-radius-small) !important;
+}
+
+/* Cartes et éléments de contenu */
+.card {
+  border-radius: var(--border-radius) !important;
+  background: var(--secondary-color) !important;
+  box-shadow: var(--shadow) !important;
+  transition: var(--transition) !important;
+  overflow: hidden !important;
+}
+
+.card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+.cardImage {
+  border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+}
+
+.cardBox {
+  border-radius: var(--border-radius) !important;
+  background-color: var(--secondary-color) !important;
+}
+
+/* Boutons */
+.btn {
+  border-radius: var(--border-radius-small) !important;
+  background-color: var(--tertiary-color) !important;
+  color: var(--text-primary) !important;
+  border: none !important;
+  transition: var(--transition) !important;
+  padding: 8px 16px !important;
+}
+
+.btn:hover {
+  background-color: var(--hover-color) !important;
+  transform: scale(1.05) !important;
+}
+
+.btn-submit {
+  background-color: var(--accent-color) !important;
+}
+
+.btn-delete {
+  background-color: #d32f2f !important;
+}
+
+/* Champs de formulaire */
+.inputLabel {
+  color: var(--text-secondary) !important;
+}
+
+.emby-input {
+  background-color: var(--tertiary-color) !important;
+  color: var(--text-primary) !important;
+  border-radius: var(--border-radius-small) !important;
+  border: 1px solid var(--accent-color) !important;
+  padding: 12px !important;
+  transition: var(--transition) !important;
+}
+
+.emby-input:focus {
+  border-color: var(--hover-color) !important;
+  box-shadow: 0 0 0 2px rgba(90, 90, 90, 0.2) !important;
+}
+
+/* Listes déroulantes */
+.emby-select {
+  background-color: var(--tertiary-color) !important;
+  color: var(--text-primary) !important;
+  border-radius: var(--border-radius-small) !important;
+  border: 1px solid var(--accent-color) !important;
+}
+
+/* Cases à cocher */
+.emby-checkbox:checked + span {
+  background-color: var(--accent-color) !important;
+  border-radius: var(--border-radius-small) !important;
+}
+
+/* Barre de recherche */
+.searchInput {
+  background-color: var(--tertiary-color) !important;
+  color: var(--text-primary) !important;
+  border-radius: var(--border-radius-large) !important;
+  border: 1px solid var(--accent-color) !important;
+  padding: 12px 20px !important;
+}
+
+.searchInput:focus {
+  border-color: var(--hover-color) !important;
+  box-shadow: 0 0 0 3px rgba(90, 90, 90, 0.3) !important;
+}
+
+/* Dialogues et modales */
+.dialog {
+  border-radius: var(--border-radius-large) !important;
+  background-color: var(--secondary-color) !important;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dialog-title {
+  color: var(--text-primary) !important;
+  background-color: var(--tertiary-color) !important;
+  border-radius: var(--border-radius-large) var(--border-radius-large) 0 0 !important;
+  padding: 16px !important;
+}
+
+/* Barre de progression */
+.progressring-bg {
+  background-color: var(--tertiary-color) !important;
+  border-radius: 50% !important;
+}
+
+.progressring-fg {
+  stroke: var(--accent-color) !important;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-color) !important;
+  border-radius: 4px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary-color) !important;
+  border-radius: 4px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hover-color) !important;
+}
+
+/* Sections de la bibliothèque */
+.sectionTitle {
+  color: var(--text-primary) !important;
+  font-weight: 600 !important;
+  margin-bottom: 16px !important;
+}
+
+.itemsContainer {
+  background-color: transparent !important;
+}
+
+/* Page de détails des médias */
+.detailPageWrapperContainer {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+}
+
+.detailPagePrimaryContainer {
+  background-color: rgba(45, 45, 45, 0.9) !important;
+  border-radius: var(--border-radius-large) !important;
+  padding: 24px !important;
+  margin: 16px !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Lecteur vidéo */
+.videoPlayer {
+  border-radius: var(--border-radius-large) !important;
+  overflow: hidden !important;
+}
+
+/* Menu contextuel */
+.popup {
+  border-radius: var(--border-radius) !important;
+  background-color: var(--secondary-color) !important;
+  box-shadow: var(--shadow) !important;
+  border: 1px solid var(--tertiary-color) !important;
+}
+
+/* Éléments de menu */
+.menuItem {
+  border-radius: var(--border-radius-small) !important;
+  transition: var(--transition) !important;
+}
+
+.menuItem:hover {
+  background-color: var(--tertiary-color) !important;
+}
+
+/* Notifications */
+.toast {
+  border-radius: var(--border-radius) !important;
+  background-color: var(--secondary-color) !important;
+  color: var(--text-primary) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+/* Pied de page */
+.footer {
+  background-color: var(--secondary-color) !important;
+  border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+  margin-top: 32px !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  :root {
+    --border-radius: 8px;
+    --border-radius-small: 6px;
+    --border-radius-large: 12px;
+  }
+  
+  .detailPagePrimaryContainer {
+    margin: 8px !important;
+    padding: 16px !important;
+  }
+}
+
+/* Animations d'entrée */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeIn 0.5s ease-out !important;
+}
+
+/* État de chargement */
+.loading {
+  background: linear-gradient(90deg, var(--primary-color) 25%, var(--tertiary-color) 50%, var(--primary-color) 75%) !important;
+  background-size: 200% 100% !important;
+  animation: loading 1.5s infinite !important;
+  border-radius: var(--border-radius-small) !important;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
